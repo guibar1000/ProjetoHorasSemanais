@@ -1,0 +1,10 @@
+
+.funcionario-details{
+    background-color: #EEE;
+    padding: 10px 20px;
+}
+
+.funcionario-details .input{
+    width: auto;
+    text-align: center;
+}

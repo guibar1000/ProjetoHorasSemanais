@@ -1,0 +1,33 @@
+<div *ngIf="detalheFuncionario">
+
+  <h4>Detalhes de : {{ detalheFuncionario.nome}}</h4>
+  <div class="container mb-5">
+    <div class="row funcionario-details">
+      <div class="d-none">
+        <label>Id: </label>{{detalheFuncionario.id}}
+      </div>
+      <div class="col-12">
+        <label>Nome: </label>
+        <input [(ngModel)]="detalheFuncionario.nome" placeholder="nome">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <label>Horas de Trabalho por Dia: </label>
+        <input [(ngModel)]="detalheFuncionario.horasPorDia" placeholder="horas">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <label>Dias Trabalhados : </label>
+        <input [(ngModel)]="detalheFuncionario.diasTrabalhados" placeholder="dias">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <label>Horas Já Trabalhadas: </label>
+        <input [(ngModel)]="detalheFuncionario.horasJaTrabalhadas" placeholder="horas">
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <label>Minutos Já Trabalhados: </label>
+        <input [(ngModel)]="detalheFuncionario.minutosJaTrabalhados" placeholder="minutos">
+      </div>
+      <div class="col-12">
+        <label>Horas de Trabalho Restantes no Mês:</label> {{detalheFuncionario.horasTotais}}</div>
+    </div>
+  </div>
+</div>

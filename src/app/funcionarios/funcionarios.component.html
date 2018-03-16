@@ -1,0 +1,9 @@
+<div>
+  <h3>Quadro de contratados:</h3>
+  <ul class="funcionario-area">
+    <li *ngFor="let funcionario of funcionariosContratados" (click)="onSelect(funcionario)" >
+      <span class="funcionario-id">{{funcionario.id}}</span>
+      <span class="funcionario-name">{{funcionario.nome}}</span>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,48 @@
+.funcionario-area{
+    margin: 0 0 32px 0;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.funcionario-area li{
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: 10px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.funcionario-area li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: 3px;
+  }
+
+  .selected {
+    background-color: #b6c2c7 !important;
+    color: white;
+  }
+
+.funcionario-area li.selected:hover{
+    background-color: #BBD8DC;
+    color: white;
+}
+
+.funcionario-area .funcionario-id{
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+    padding: 7px 12px 0 12px;
+    background-color: #607D8B;
+    line-height: 16px;
+    height: 30px;
+    margin-right: 12px;
+    border-radius: 4px 0 0 4px;
+}
+
+.funcionario-area .funcionario-name{
+    display: inline-block;
+}
