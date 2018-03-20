@@ -14,21 +14,21 @@ export class AppComponent {
     this.toastr.setRootViewContainerRef(vcr);
   }
 
-  showSuccess() {
-    this.toastr.success('You are awesome!', 'Success!');
-  }
-  showError() {
-    this.toastr.error('This is not good!', 'Oops!');
-  }
-  showWarning() {
-    this.toastr.warning('You are being warned.', 'Alert!');
-  }
-  showInfo() {
-    this.toastr.info('Just some information for you.');
-  }
+  // showSuccess() {
+  //   this.toastr.success('You are awesome!', 'Success!');
+  // }
+  // showError() {
+  //   this.toastr.error('This is not good!', 'Oops!');
+  // }
+  // showWarning() {
+  //   this.toastr.warning('You are being warned.', 'Alert!');
+  // }
+  // showInfo() {
+  //   this.toastr.info('Just some information for you.');
+  // }
 
-  showCustom() {
-    this.toastr.custom('<span style="color: red">Message in red.</span>', null, { enableHTML: true });
-  }
+  // showCustom() {
+  //   this.toastr.custom('<span style="color: red">Message in red.</span>', null, { enableHTML: true });
+  // }
 
 }

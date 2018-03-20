@@ -5,7 +5,9 @@ export class Funcionario {
   horasJaTrabalhadas: number;
   minutosJaTrabalhados: number;
   horasPorDia: number;
-  horasTotais: number;
+  horasTotais: string;
+  mediaHorasATrabalhar: number;
+  mediaHorasJaTrabalhadas: number;
 }
 
 export class DiasUteisPorMes {

@@ -26,8 +26,29 @@
         <label>Minutos Já Trabalhados: </label>
         <input [(ngModel)]="detalheFuncionario.minutosJaTrabalhados" placeholder="minutos">
       </div>
+
+      <div class="col-md-6 col-sm-12">
+        <label>Selecione o Mês: </label>
+        <select class='' [(ngModel)]='mesSelecionado' (change)='onOptionSelected($event.target.value)'>
+          <option class='' *ngFor='let mes of meses' [value]="mes.id">{{mes.nome}}</option>
+        </select>
+      </div>
+
       <div class="col-12">
-        <label>Horas de Trabalho Restantes no Mês:</label> {{detalheFuncionario.horasTotais}}</div>
+        <button (click)="calculaHoras()">Salvar e Calcular Horas</button>
+        <button (click)="goBack()">Voltar</button>
+        <button (click)="exportCsv()">Exportar como CSV</button>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <label>Horas já Trabalhadas no Mês:</label> {{detalheFuncionario.horasTotais}}
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <label>Horas a serem trabalhadas por dia no mes:</label> {{detalheFuncionario.mediaHorasATrabalhar}}
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <label>Media de horas feitas nos dias trabalhados:</label> {{detalheFuncionario.mediaHorasJaTrabalhadas}}
+      </div>
     </div>
   </div>
-</div>
