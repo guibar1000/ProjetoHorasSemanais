@@ -118,25 +118,25 @@ export class DetalhesfuncionariosComponent implements OnInit {
     // tslint:disable-next-line:no-shadowed-variable
     // tslint:disable-next-line:forin
     for (const index in objArray[0]) {
-        row += index + ',';
+      row += index + ',';
     }
     row = row.slice(0, -1);
     str += row + '\r\n';
 
     for (let i = 0; i < array.length; i++) {
-        let line = '';
-        // tslint:disable-next-line:forin
-        for (const index in array[i]) {
-            if (line !== '') { line += ','; }
+      let line = '';
+      // tslint:disable-next-line:forin
+      for (const index in array[i]) {
+        if (line !== '') { line += ','; }
 
-            line += '"' + array[i][index] + '"';
-        }
+        line += '"' + array[i][index] + '"';
+      }
 
-        str += line + '\r\n';
+      str += line + '\r\n';
     }
 
     return str;
-}
+  }
 
 
   exportCsv() {
@@ -151,9 +151,9 @@ export class DetalhesfuncionariosComponent implements OnInit {
         horasTotais: this.detalheFuncionario.horasTotais,
         mediaHorasATrabalhar: this.detalheFuncionario.mediaHorasATrabalhar,
         mediaHorasJaTrabalhadas: this.detalheFuncionario.mediaHorasJaTrabalhadas,
-        mes: this.mesSelecionado.nome,
-        diasuteisdomes: this.mesSelecionado.diasUteis,
-        horasMaximasPorMes: (this.detalheFuncionario.horasPorDia * this.mesSelecionado.diasUteis)
+        mes: this.mes.nome.toString(),
+        diasuteisdomes: parseFloat(this.mes.diasUteis.toString()),
+        horasMaximasPorMes: (parseFloat(this.detalheFuncionario.horasPorDia.toString()) * parseFloat(this.mes.diasUteis.toString()))
       },
     ];
     const filename = 'DetalheFuncionario2018';
